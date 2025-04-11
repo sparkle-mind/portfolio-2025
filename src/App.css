@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/*==================================== VARIABLES ====================================*/
+:root {
+    --first-font: 'Poppins';
+    --second-font: 'Inter';
+    --third-font: 'DM Sans';
+
+    --theme-color: #0b1616;
+    --white: #ffffff;
+    --light-white: #cbcbcb;
+    --black: #000000;
+    --clr-6f42c1: #6f42c1;
+    --btn-bg: #264949;
+    --gradient-yellow: linear-gradient(to right, #FFE597 0%, #AAFF82 100%);
+
+    --h1: normal 700 55px/1.3 var(--first-font);
+    --h2: normal 600 42px/1.3 var(--second-font);
+    --h3: normal 500 32px/1.3 var(--third-font);
+    --h4: normal 500 28px/1.3 var(--second-font);
+    --h5: normal 500 22px/1.3 var(--first-font);
+    --h6: normal 500 18px/1.3 var(--first-font);
+    --p: normal 400 16px/1.3 var(--first-font);
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    list-style: none;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+html {
+    outline: none;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    color: var(--white);
+    line-height: 1.3;
+    font-size: 16px;
+    font-family: var(--first-font);
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    background-color: var(--theme-color);
+}
+
+svg,
+img {
+    max-width: 100%;
+    display: block;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+input[type='text'],
+input[type='search'],
+input[type='email'],
+input[type='password'],
+input[type='number'],
+select,
+textarea {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    outline: none;
+    resize: none;
+    font-family: var(--first-font);
+}
+
+a,
+a:focus,
+button,
+button:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+span {
+    display: block;
+}
+
+::selection {
+    background: rgba(166, 175, 189, 0.3);
+}
+
+::-moz-selection {
+    background: rgba(166, 175, 189, 0.3);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+p:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+/* ==================================== TYPOGRAPHY ==================================== */
+h1,
+.h1 {
+    font: var(--h1);
+
+}
+
+h2,
+.h2 {
+    font: var(--h2);
+}
+
+h3,
+.h3 {
+    font: var(--h3);
+}
+
+h4,
+.h4 {
+    font: var(--h4);
+}
+
+h5,
+.h5 {
+    font: var(--h5);
+}
+
+h6,
+.h6 {
+    font: var(--h6);
+}
+
+.p,
+p {
+    font: var(--p);
+}
+
+/*====================================  HELPING CLASSES ====================================*/
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
+}
+
+/************************************* COMMON BUTTON CSS **************************************/
+
+button,
+.btn,
+.btn-primary {
+    text-align: center;
+    font: normal bold 14px/21px var(--first-font);
+    padding: 10px 20px;
+    display: inline-block;
+    letter-spacing: 0;
+    color: var(--white);
+    background: var(--btn-bg);
+    text-transform: unset;
+    box-shadow: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 76px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+
+button:hover,
+.btn:hover,
+.btn-primary:hover {
+    color: var(--white);
+    background: linear-gradient(45deg, #212121, #252525);
+    background: radial-gradient(circle at bottom,
+            rgba(50, 100, 180, 0.5) 10%,
+            #212121 70%);
+    outline: 0;
+}
+
+button:focus,
+.btn:focus,
+.btn-primary:focus {
+    color: var(--white);
+    box-shadow: 0 0 1em 0.45em rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #212121, #252525);
+    background: radial-gradient(circle at bottom,
+            rgba(50, 100, 180, 0.5) 10%,
+            #212121 70%);
+    outline: 0;
+
+}
+
+/*==================================== COMMON CSS ====================================*/
+
+.section-title h2 {
+    font: var(--h2);
+    color: var(--text-color-second);
+    margin-bottom: 25px;
+    text-transform: capitalize;
+    background-color: var(--btn-bg);
+    padding-right: 20px;
+    position: relative;
+    z-index: 2;
+    width: max-content;
+    padding: 7px 30px 7px 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title {
+    position: relative;
+    z-index: 2;
+
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--clr-6f42c1);
+    left: 15px;
+    top: 50%;
+    z-index: 0;
+}
+
+.titleIcon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.titleIcon svg,
+.titleIcon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+section {
+    padding: 80px 0;
+}
+
+
+/*==================================== HEADER START====================================*/
+
+/*==================================== HEADER END====================================*/
+
+/*=========== RESPONSIVE START =============  */
+@media screen and (max-width: 1600px) {}
+
+@media screen and (max-width: 1440px) {
+    .section-title h2 {
+        font: var(--h4);
+        padding: 7px 20px 7px 10px;
+    }
+
+}
+
+@media screen and (max-width: 1280px) {
+    section {
+        padding: 60px 0;
+    }
+
+}
+
+@media screen and (max-width: 1170px) {}
+
+@media screen and (max-width: 1024px) {
+    section {
+        padding: 40px 0;
+    }
+}
+
+@media screen and (max-width: 991px) {}
+
+@media screen and (max-width: 767px) {
+    .mobile-only {
+        display: block;
+    }
+
+    .section-title h2 {
+        font: 400 20px/1.3 var(--first-font);
+        padding: 7px 20px 7px 10px;
+        margin-bottom: 15px;
+    }
+
+    .section-title::after {
+        height: 1px;
+    }
+  
+}
+
+@media screen and (max-width: 575px) {}
+
+@media screen and (max-width: 425px) {}
+
+@media screen and (max-width: 375px) {}

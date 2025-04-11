@@ -1,0 +1,143 @@
+.card {
+  width: 33.33%;
+  padding: 15px;
+
+  .card-inner {
+    border: 1px solid var(--light-white);
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+      box-shadow: 6px 4px 0px #fff;
+    }
+  }
+
+  .card-img {
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .card-technology {
+    padding: 10px 0;
+    border-top: 1px solid var(--light-white);
+    border-bottom: 1px solid var(--light-white);
+
+    li {
+      padding: 5px 10px;
+      margin: 2px 5px;
+      font: var(--h6);
+      text-transform: capitalize;
+      font-style: italic;
+      background: var(--gradient-yellow);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .project-desc {
+    border-bottom: 1px solid var(--light-white);
+    padding: 10px 15px;
+
+    .card-title {
+      text-transform: capitalize;
+    }
+
+    p {
+      font: var(--h6);
+      margin: 15px 0;
+      font-weight: 400;
+    }
+  }
+
+  .view-project {
+    font: var(--p);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    margin-top: auto;
+    color: var(--light-white);
+  }
+}
+
+@media (max-width: 1170px) {
+  .card {
+    padding: 10px 8px;
+
+    .card-inner {
+      border-radius: 20px;
+    }
+
+    .card-technology {
+      padding: 5px 3px;
+
+      li {
+        padding: 5px;
+        margin: 2px;
+        font-size: 16px;
+      }
+    }
+
+    .project-desc {
+      padding: 8px 10px;
+
+      p {
+        font-size: 16px;
+        margin: 6px 0;
+      }
+    }
+
+    .view-project {
+      gap: 5px;
+      padding: 5px 15px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 50%;
+
+    .card-img {
+      min-height: 170px;
+      max-height: 170px;
+
+    }
+
+    .card-technology {
+      li {
+        font-size: 14px;
+      }
+    }
+
+    .project-desc {
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .view-project {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .card {
+    width: 100%;
+  }
+}
