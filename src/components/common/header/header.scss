@@ -1,8 +1,9 @@
 .header {
     padding: 15px 0;
-    // background: linear-gradient(#ffffff, #fff) padding-box padding-box, linear-gradient(106deg, rgb(0 255 34 / 30%) 34.84%, rgb(0 182 255 / 30%) 114%) border-box;
-    // border-radius: 30px;
-    // border: 5px solid transparent;
+    // background: var(--gradient-yellow);
+    background: transparent;
+    border-radius: 30px;
+    border: 2px solid var(--light-white);
     margin: 15px;
     .logo {
         max-width: 150px;
@@ -29,10 +30,10 @@
                     padding: 10px 15px;
 
                     &:hover {
-                        color: var(--clr-6f42c1);
+                        color: var(--white);
                     }
                 }
-            }
+            }    
         }
-    }
+    } 
 }

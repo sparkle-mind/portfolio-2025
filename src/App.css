@@ -361,10 +361,7 @@ button:hover,
 .btn:hover,
 .btn-primary:hover {
     color: var(--white);
-    background: linear-gradient(45deg, #212121, #252525);
-    background: radial-gradient(circle at bottom,
-            rgba(50, 100, 180, 0.5) 10%,
-            #212121 70%);
+    box-shadow: 4px 3px 0px #fff;
     outline: 0;
 }
 
